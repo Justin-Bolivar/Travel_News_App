@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'app_styles.dart';
 import 'size_config.dart';
+import 'news_detail_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
@@ -31,7 +32,7 @@ class _MyWidgetState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: kLighterWhite,
-        body: const HomeScreen(),
+        body: const NewsDetailScreen(),
         bottomNavigationBar: BottomNavigationBar(
           elevation: 0,
           type: BottomNavigationBarType.fixed,
