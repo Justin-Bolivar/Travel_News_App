@@ -153,6 +153,39 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ),
+          const SizedBox(
+            height: 30,
+          ),
+          SizedBox(
+            height: 304,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: 10,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return Container(
+                  padding: const EdgeInsets.all(12),
+                  margin: const EdgeInsets.only(
+                    right: 20,
+                  ),
+                  height: 304,
+                  width: 255,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(kBorderRadius),
+                    color: kWhite,
+                    boxShadow: [
+                      BoxShadow(
+                        color: kDarkBlue.withOpacity(0.051),
+                        offset: const Offset(0.0, 3.0),
+                        blurRadius: 24.0,
+                        spreadRadius: 0.0,
+                      )
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
