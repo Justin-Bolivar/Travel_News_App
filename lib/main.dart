@@ -128,6 +128,31 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(
+            height: 15,
+          ),
+          SizedBox(
+            height: 14,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.only(
+                    right: 38,
+                  ),
+                  child: Text(
+                    '#Health',
+                    style: kPoppinsMedium.copyWith(
+                      color: kGrey,
+                      fontSize: 12,
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
