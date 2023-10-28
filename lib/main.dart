@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_styles.dart';
-import 'size_config.dart';
+import 'profile_screen.dart';
 import 'news_detail_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -32,7 +32,7 @@ class _MyWidgetState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: kLighterWhite,
-        body: const NewsDetailScreen(),
+        body: const HomeScreen(),
         bottomNavigationBar: BottomNavigationBar(
           elevation: 0,
           type: BottomNavigationBarType.fixed,
@@ -229,14 +229,22 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Container(
-                        height: 164,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(kBorderRadius),
-                          image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                              'https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg',
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const NewsDetailScreen()),
+                          );
+                        },
+                        child: Container(
+                          height: 164,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(kBorderRadius),
+                            image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                'https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg',
+                              ),
                             ),
                           ),
                         ),
@@ -262,11 +270,20 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              const CircleAvatar(
-                                radius: 19,
-                                backgroundColor: kLightBlue,
-                                backgroundImage: NetworkImage(
-                                  'https://avatars.githubusercontent.com/u/143471181?v=4',
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ProfileScreen()),
+                                  );
+                                },
+                                child: const CircleAvatar(
+                                  radius: 19,
+                                  backgroundColor: kLightBlue,
+                                  backgroundImage: NetworkImage(
+                                    'https://avatars.githubusercontent.com/u/143471181?v=4',
+                                  ),
                                 ),
                               ),
                               const SizedBox(
