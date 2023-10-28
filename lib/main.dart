@@ -32,50 +32,91 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: ListView(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
+        child: ListView(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 30,
+      ),
+      children: [
+        Row(
+          children: [
+            Container(
+              height: 51,
+              width: 51,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(kBorderRadius),
+                color: kLightBlue,
+                image: const DecorationImage(
+                  image: NetworkImage(
+                    'https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png',
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 16,
+            ),
+            const SizedBox(
+              width: 16,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Welcome Back!',
+                  style: kPoppinsBold.copyWith(fontSize: 16),
+                ),
+                Text(
+                  'Monday, 31 October',
+                  style: kPoppinsRegular.copyWith(color: kGrey, fontSize: 12),
+                ),
+              ],
+            ),
+          ],
         ),
-        children: [
-          Row(
+        const SizedBox(
+          height: 30,
+        ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(kBorderRadius),
+            color: kWhite,
+            boxShadow: [
+              BoxShadow(
+                color: kDarkBlue.withOpacity(0.051),
+                offset: const Offset(0.0, 3.0),
+                blurRadius: 24.0,
+                spreadRadius: 0.0,
+              )
+            ],
+          ),
+          child: Row(
             children: [
-              Container(
-                height: 51,
-                width: 51,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(kBorderRadius),
-                  color: kLightBlue,
-                  image: const DecorationImage(
-                    image: NetworkImage(
-                      'https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png',
+              Expanded(
+                child: TextField(
+                  style: kPoppinsRegular.copyWith(color: kBlue, fontSize: 12),
+                  controller: TextEditingController(),
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 13,
+                    ),
+                    hintText: 'Search for article...',
+                    border: kBorder,
+                    errorBorder: kBorder,
+                    disabledBorder: kBorder,
+                    focusedBorder: kBorder,
+                    focusedErrorBorder: kBorder,
+                    hintStyle: kPoppinsRegular.copyWith(
+                      color: kLightGrey,
+                      fontSize: 12,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 16,
-              ),
-              const SizedBox(
-                width: 16,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Welcome Back!',
-                    style: kPoppinsBold.copyWith(fontSize: 16),
-                  ),
-                  Text(
-                    'Monday, 31 October',
-                    style: kPoppinsRegular.copyWith(color: kGrey, fontSize: 12),
-                  ),
-                ],
-              ),
             ],
           ),
-        ],
-      ),
-    );
+        ),
+      ],
+    ));
   }
 }
