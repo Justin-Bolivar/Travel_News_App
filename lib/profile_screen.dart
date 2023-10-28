@@ -91,7 +91,7 @@ class ProfileScreen extends StatelessWidget {
                 height: SizeConfig.blockSizeVertical! * 2.5,
               ),
               Text(
-                'Every piece of chocolate I ever ate is getting back at me.. desserts are very revengeful..',
+                'A is for Anxiety',
                 style: kPoppinsMedium.copyWith(
                   color: kGrey,
                   fontSize: SizeConfig.blockSizeHorizontal! * 3,
@@ -201,7 +201,7 @@ class ProfileScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Elly\'s Post',
+                    'Ctrl.\'s Post',
                     style: kPoppinsBold.copyWith(
                       color: kDarkBlue,
                       fontSize: SizeConfig.blockSizeHorizontal! * 4,
@@ -355,7 +355,7 @@ class ProfileScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Popular From Elly',
+                    'Popular From Ctrl',
                     style: kPoppinsBold.copyWith(
                       color: kDarkBlue,
                       fontSize: SizeConfig.blockSizeHorizontal! * 4,

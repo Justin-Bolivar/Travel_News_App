@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'app_styles.dart';
+import 'profile_screen.dart';
 import 'size_config.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -119,11 +120,19 @@ class NewsDetailScreen extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  const CircleAvatar(
-                    radius: 13,
-                    backgroundColor: kBlue,
-                    backgroundImage: NetworkImage(
-                      'https://avatars.githubusercontent.com/u/143471181?v=4',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => const ProfileScreen()),
+                      );
+                    },
+                    child: const CircleAvatar(
+                      radius: 13,
+                      backgroundColor: kBlue,
+                      backgroundImage: NetworkImage(
+                        'https://avatars.githubusercontent.com/u/143471181?v=4',
+                      ),
                     ),
                   ),
                   SizedBox(
